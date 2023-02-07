@@ -8,7 +8,8 @@ import MoviesPage from "./pages/MoviesPage";
 function App() {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
-  const url = `https://api.themoviedb.org/3/search/movie?api_key=37806dd1300837fa217e0539b5252818&language=en-US&query=${query}&page=1&include_adult=false`;
+  const apiKey = process.env.REACT_APP_API_KEY;
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=1&include_adult=false`;
 
   useEffect(() => {
     if (query) {

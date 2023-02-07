@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { ReactComponent as ArrowDown } from "../assets/arrow-down.svg";
 import { ReactComponent as NotificationIcon } from "../assets/notification.svg";
@@ -6,7 +6,6 @@ import { ReactComponent as SearchIcon } from "../assets/Search.svg";
 import avatar from "../assets/avatar.png";
 
 const Navbar = ({ setQuery }) => {
-
   const location = useLocation();
 
   const handleSearch = (e) => {
